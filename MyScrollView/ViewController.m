@@ -10,11 +10,6 @@
 #import "MyScrollView.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIView *rootView;
-@property (weak, nonatomic) IBOutlet UIView *redView;
-@property (weak, nonatomic) IBOutlet UIView *greenView;
-@property (weak, nonatomic) IBOutlet UIView *blueView;
-@property (weak, nonatomic) IBOutlet UIView *yellowView;
 @property (nonatomic) MyScrollView *myScrollView;
 
 @end
@@ -28,7 +23,6 @@
 
 
 -(void)viewDidAppear:(BOOL)animated{
-    self.rootView.center = CGPointMake(self.rootView.center.x, self.rootView.center.y-100);
 //    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panMethod:)];
 //    [self.view addGestureRecognizer:pan];
     self.myScrollView = [[MyScrollView alloc] initWithFrame:self.view.frame];
